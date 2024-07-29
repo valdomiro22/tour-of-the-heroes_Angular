@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'curso-tour-of-heroes-frontend';
+  title = 'Tour of Heroes';
 }
+  // Video 7
