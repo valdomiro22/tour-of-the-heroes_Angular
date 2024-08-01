@@ -6,16 +6,11 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MessagesComponent } from './messages/messages.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatIconButton } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { FlexLayoutModule } from '@angular/flex-layout'
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { CoreModule, FlexLayoutModule } from '@angular/flex-layout'
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {MatCardModule} from '@angular/material/card';
+import { MaterialModule } from './material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -27,16 +22,11 @@ import {MatCardModule} from '@angular/material/card';
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     AppRoutingModule,
     FormsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatIconButton,
-    MatIconModule,
     FlexLayoutModule,
-    MatTooltipModule,
-    MatCardModule,
+    MaterialModule,
   ],
   providers: [
     provideAnimationsAsync()
