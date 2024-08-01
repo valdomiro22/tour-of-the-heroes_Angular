@@ -1,0 +1,15 @@
+.heroes {
+  cursor: pointer;
+}
+
+.heroes li.selected {
+  background-color: var(--blue-padrao);
+  border-radius: 3px;
+  color: white;
+  padding-left: 3px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1.2rem;
+}
