@@ -2,14 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { HeroesComponent } from './heroes/components/heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MessagesComponent } from './messages/messages.component';
-import { CoreModule, FlexLayoutModule } from '@angular/flex-layout'
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MaterialModule } from './material/material.module';
+import { CoreModule } from './core/core.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 @NgModule({
@@ -17,16 +15,18 @@ import { MaterialModule } from './material/material.module';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent,
-    DashboardComponent,
   ],
   imports: [
+    // @angular
     BrowserModule,
+    FormsModule,
+
+    // Feature
+    DashboardModule,
+
+    // App
     CoreModule,
     AppRoutingModule,
-    FormsModule,
-    FlexLayoutModule,
-    MaterialModule,
   ],
   providers: [
     provideAnimationsAsync()
